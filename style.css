@@ -1,0 +1,205 @@
+/* =============================
+   Netflix Theme Global
+============================= */
+body {
+  background-color: #141414;
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* =============================
+   Navbar
+============================= */
+.navbar {
+  background: linear-gradient(180deg, rgba(0,0,0,0.8) 10%, transparent);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar.scrolled {
+  background-color: #141414 !important;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #E50914 !important; /* Netflix red */
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: #e5e5e5 !important;
+  margin: 0 12px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Profile */
+.navbar-profile {
+  position: relative;
+  margin-left: 20px;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 32px; /* fixed typo */
+  border-radius: 4px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Profile dropdown */
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: #141414;
+  border: 1px solid #333;
+  border-radius: 4px;
+  min-width: 150px;
+  z-index: 1001;
+}
+.profile-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.profile-dropdown a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Show dropdown on hover */
+.navbar-profile:hover .profile-dropdown {
+  display: block;
+}
+
+/* =============================
+   Hero Section
+============================= */
+.hero-section {
+  height: 90vh;
+  background: url("https://image.tmdb.org/t/p/original/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg") no-repeat center center/cover;
+  color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  max-width: 650px;
+}
+
+/* Buttons Netflix Style */
+.btn-netflix {
+  background-color: #E50914;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+.btn-netflix:hover {
+  background-color: #f40612;
+}
+
+.btn-secondary-netflix {
+  background-color: rgba(109,109,110,0.7);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+}
+.btn-secondary-netflix:hover {
+  background-color: rgba(109,109,110,0.4);
+}
+
+/* =============================
+   Movie Rows & Cards (Netflix style)
+============================= */
+.movie-section {
+  padding: 60px 20px 20px;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.movie-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 60px 20px 20px;
+}
+.movie-card {
+  width: 200px;
+  flex: 0 0 auto;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+.movie-card img:hover {
+  transform: scale(1.05);
+}
+
+/* =============================
+   Footer
+============================= */
+.footer {
+  background-color: #000;
+  padding: 40px 20px;
+  text-align: center;
+  color: #737373;
+}
+.footer a {
+  color: #737373;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.footer a:hover {
+  color: #fff;
+}
